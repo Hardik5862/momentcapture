@@ -109,7 +109,7 @@ const Pin = ({ pin }) => {
               )}
             </div>
             <div className=" flex justify-between items-center gap-2 w-full">
-              {destination?.slice(8).length > 0 ? (
+              {destination?.length > 0 ? (
                 <a
                   href={destination}
                   target="_blank"
@@ -117,7 +117,7 @@ const Pin = ({ pin }) => {
                   rel="noreferrer"
                 >
                   <BsFillArrowUpRightCircleFill />
-                  {destination?.slice(8, 17)}...
+                  {destination?.slice(0, 15)}...
                 </a>
               ) : undefined}
               {postedBy?._id === user?.googleId && (
